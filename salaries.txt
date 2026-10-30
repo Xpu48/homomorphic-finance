@@ -1,0 +1,4 @@
+Software Engineer:85000.50
+Product Manager:92000.00
+Data Analyst:68500.25
+IT Specialist:40000.00
