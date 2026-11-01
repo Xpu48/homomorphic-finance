@@ -19,7 +19,7 @@ def salary_analytics():
     
     print("Reading the encrypted text file... from"'{data_file}'"Double checking if it's available...")
     
-    with open(date_file, "r") as file:
+    with open(data_file, "r") as file:
         for line in file:
             #This is to clean things for more readablitiy.
             line = line.strip()
@@ -33,7 +33,7 @@ def salary_analytics():
             #This is to put the amount to encryption before the outside can touch any value.            
             encrypted_salaries[role] = public_key.encrypt(amount)
             
-            
+    
         
 
 
