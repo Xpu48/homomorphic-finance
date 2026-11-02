@@ -4,6 +4,8 @@ This is a mini project to show how sensitive data can be encrypted and potential
 
 I am using a library named phe to use the built in paillier for the Partial Homomorphic Encryption. The library allowed me to efficiently make this project without having to write the algorithms or the number theory or integer maths to generate keys for encryption or decryption.
 
+AI was used for research and understanding of Homomorphic Encryption, alongside understanding how to use the import phe for paillier. I wrote the code and writing entirely myself.
+
 How it works:
 - Key Generation: A 2048 bit key generation is run to encrypt each specific job role and it's value.
 - Local Data Extract: A local script reads the inputs of the file 'salaries.txt'.

@@ -69,10 +69,4 @@ def salary_analytics():
     
 if __name__ == "__main__":
     salary_analytics()
-            
-    
-        
-
-
-    
     
