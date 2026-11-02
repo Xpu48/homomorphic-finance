@@ -51,6 +51,7 @@ def salary_analytics():
     print(f"Total Employees: {total_employees}")
     print(f"Total Salary: {final_summary}")
     print(f"Average Salary: {average_salary}")
+    print(f"List of Jobs: {list(encrypted_salaries.keys())}")
     print("=====================================")
     
 if __name__ == "__main__":

@@ -2,3 +2,9 @@ Software Engineer:85000.50
 Product Manager:92000.00
 Data Analyst:68500.25
 IT Specialist:40000.00
+HR Analyst:45000.00
+Operations:30000.00
+Security:28000.00
+Concierge:30000.00
+IT Manager:80000.00
+IT Support: 35000.00
