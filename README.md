@@ -7,6 +7,7 @@ I am using a library named phe to use the built in paillier for the Partial Homo
 How it works:
 - Key Generation: A 2048 bit key generation is run to encrypt each specific job role and it's value.
 - Local Data Extract: A local script reads the inputs of the file 'salaries.txt'.
+- Checks if the data in the salaries are within the Max and Min boundaries to prevent miscalculation.
 - Encryption: Before any data leaves the network/file the script turns values into unique cyphertexts.
 - Blind Calculation: Receves the ciphertexts and calculates the following using sum() using paillier which automatically adds the plaintext through ciphertext.
 - Ones the results are made a private key is used to return and unlock the grand total and divides for the mean.

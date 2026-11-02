@@ -8,3 +8,5 @@ Security:28000.00
 Concierge:30000.00
 IT Manager:80000.00
 IT Support: 35000.00
+QA/UI Engineer: 10000.00
+Janitor: 25000000.00

@@ -9,6 +9,10 @@ def salary_analytics():
     public_key, private_key = paillier.generate_paillier_keypair()
     print("Keys Generated")
     
+    #The range for salary boundary
+    MIN_SALARY = 15000.00
+    MAX_SALARY = 250000.00
+    
     #Taking data and encrypting it within dictionary
     encrypted_salaries = {}
     data_file = "salaries.txt"
@@ -29,7 +33,15 @@ def salary_analytics():
             #This is the spliting, looking for the first : only
             role, amount_str = line.split(":",1)
             amount = float(amount_str)
-
+            
+            #Checks to see if it's within bounds to prevent any misuse of data resulting in the wrong calculation.
+            if amount < MIN_SALARY or amount > MAX_SALARY:
+                print(f"=========== Warning: Salary of {role} ===========")
+                print(f"Salary for {role} is out of bounds.")
+                print(f"Amount: {amount} is not within the range of {MIN_SALARY} to {MAX_SALARY}.")
+                print("Skipping this entry...")
+                continue
+            
             #This is to put the amount to encryption before the outside can touch any value.            
             encrypted_salaries[role] = public_key.encrypt(amount)
             
@@ -37,6 +49,7 @@ def salary_analytics():
             cyphertext = encrypted_salaries[role]
             print(f"Encrypted salary for {role}: {cyphertext.ciphertext()}")
     
+    print("==========================================================")
     print("All salaries are encrypted and stored in the dictionary.")
     
     encrypted_sum = sum(encrypted_salaries.values())
