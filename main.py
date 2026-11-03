@@ -17,6 +17,7 @@ def salary_analytics():
     encrypted_salaries = {}
     data_file = "salaries.txt"
     
+    #Checks if the file exists
     if not os.path.exists(data_file):
         print(f"The file is not found...")
         return
@@ -52,6 +53,7 @@ def salary_analytics():
     print("==========================================================")
     print("All salaries are encrypted and stored in the dictionary.")
     
+    #This is to sum up all encrypted salaries and print the encrypted sum
     encrypted_sum = sum(encrypted_salaries.values())
     print(f"Encrypted sum of all salaries: {encrypted_sum.ciphertext()}")
     
